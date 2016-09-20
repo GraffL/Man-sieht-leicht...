@@ -1,0 +1,25 @@
+### ABZÄHLBARKEIT ################################
+
+Wie viele Varianten des (ersten) Cantorschen Diagonalargumentes gibt es? (aus der Sommerakademie 2016)
+- 1. Antwort: Das Verfahren des Diagonalargumentes muss beschreibbar sein => Es gibt nur abzählbar viele
+- 2. Antwort: Wir suchen allgemein Biijektionen von N auf sich selbst (dann mit originalem Diagonalverfahren verknüpfen)
+  -> davon gibt es überabzählbar viele, denn...
+    - Injektive Abbildung von Potenzmenge in Menge der Biijektionen finden:
+      - Teilmenge und Komplement unendlich -> tauschen; sonst bel Permutation in Teilmenge selbst?
+      - Teilmenge wird zu Fixpunktmenge einer Bijektion
+    - Reelle Binärzahlen als Weg: 1 = nach rechts, 0 = unten dann ganz nach links (immer oberste nichtbesuchte Zahl) 
+      -> damit sogar schon nur "zusammenhängende" Wege überabzählbar
+    - für endliche Mengen der Größe n ist |P(M)| = 2^n, |Bij(M,M)| = n! und es gilt n! > 2^n
+      -> über "Stetigkeit der Kardinalität" ... ?
+      
+Gibt es nicht berechenbare (reelle) Zahlen?
+ - ja, Abzählbarkeitsargument (alle Computerprogramme sind aufzählbar)
+Gibt es eine konkret angebbare nicht-berechenbare Zahl? 
+ - ??? (was bedeutet in diesem Sinn überhaupt "angebbar"?)
+ 
+
+### ZAHLENTHEORIE ################################
+
+Beweise die Irrationaliät von k-te Wurzel aus 2 über Großen Satz von Fermat (nur für k>2 möglich - für k=2 ist der Satz "zu schwach")
+  - Matt Parker: "Killing Maths Mosquitoes with Atomic Proofs: roots of two, Fermat and prime numbers " https://youtu.be/W1OkVkq2vFM
+  - Zahlentheorie-ÜB (Ingo): Blatt 1/Aufgabe 4 http://zahlentheorie.speicherleck.de/uebung01.pdf
