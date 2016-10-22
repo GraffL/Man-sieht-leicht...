@@ -1,0 +1,1 @@
+Was hat der "SO(3)-Handtrick" mit der tatsächlichen topologischen Struktur von SO(3) zu tun? Insbesondere: Warum codiert die Verdrehung des Armes die Zusammenziehbarkeit einer Kurve (der Hand)?
