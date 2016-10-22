@@ -15,7 +15,7 @@ Wie viele Varianten des (ersten) Cantorschen Diagonalargumentes gibt es? (aus de
 Gibt es nicht berechenbare (reelle) Zahlen?
  - ja, Abzählbarkeitsargument (alle Computerprogramme sind aufzählbar)
 Gibt es eine konkret angebbare nicht-berechenbare Zahl? 
- - ??? (was bedeutet in diesem Sinn überhaupt "angebbar"?)
+ - Ja! z.B. Chaitins Haltewahrscheinlichkeit Ω := \sum_p 2^-|p|, wobei p über die Liste aller anhaltenden Programme läuft und |p| die Länge der Binärdarstellung des Programms p ist. Berechenbarkeit dieser Zahl würde das Halteproblem lösen - siehe: https://github.com/iblech/mathezirkel-kurs/blob/master/thema11-goedel/skript.pdf
  
 
 ### ZAHLENTHEORIE ################################
