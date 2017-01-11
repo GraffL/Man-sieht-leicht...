@@ -11,3 +11,10 @@ Eine _Kontrollmenge_ D \subseteq M (M Mfg) ist eine maximale Teilmenge mit den b
 Ein linearer Operator A: IR^n -> IR^n heiﬂt _hyperbolisch_ :<=> A hat keine EWe auf S^1 <=> IR^n = E^- + E^+: AE^+ \subseteq E^+ und A ist auf E^- Kontraktion und auf E^+ Expansion.
 
 Gleichm‰ﬂige Hyperbolizit‰t modelliert chaotisches Verhalten.
+
+
+
+** Algebra **
+
+Warum kˆnnen die Quarternionen kein Kˆrper sein? Dann w‰ren sie eine endliche Kˆrpererweiterung von IC - IC ist aber algebraisch abgeschlossen und enth‰lt damit alle algebraischen Ereweiterungen.
+	-> In welchem Sinne ist das wirklich eine Antwort? Setzt das z.B. schon voraus, dass die IC ein Unterring von IH sein soll?
