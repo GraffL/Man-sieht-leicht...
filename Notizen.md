@@ -18,6 +18,7 @@ Gleichmäßige Hyperbolizität modelliert chaotisches Verhalten.
 
 Warum können die Quarternionen kein Körper sein? Dann wären sie eine endliche Körpererweiterung von IC - IC ist aber algebraisch abgeschlossen und enthält damit alle algebraischen Ereweiterungen.
 	-> In welchem Sinne ist das wirklich eine Antwort? Setzt das z.B. schon voraus, dass die IC ein Unterring von IH sein soll?
+
 	
 
 ** Algebraische Topologie **
@@ -38,3 +39,16 @@ Ein Morphismus zwischen Spektra f: E -> F ist eine auf einem kofinalen Unterspek
 kommutiert.
 
 
+
+** Optimierung **
+
+_(Zug-)Fahrplanprobleme_ kann man als Ereignisnetzwerk (E,A) modellieren. Dabei ist E (Knoten) die Menge der Ereignisse "Zug A hält an Bahnhof B" und "Zug A fährt von Bahnhof B ab" und A (Kanten) die Menge der Aktivitäten "Zug fährt" (von Bahnhof zu Bahnhof), "Zug wartet" (von Ankunft zu Abfahrt), "Umsteigen" (von Ankunft zu Abfahrt (verschiedener Züge)); zusätzlich wird über Aktivitätskanten modelliert, welcher Zug zuerst fahren darf (damit Gleise nicht mehrfach belegt sind). Für periodische Fahrpläne wird zusätzlich eine Periode T vorgegeben und dann alle Zeiten mod T gerechnet.
+Aktivitätskanten erhalten zusätzlich untere und obere Zeitschranken [L_a, U_a]
+
+	Ein Fahrplan entspricht nun einer Zuweisung von Zeiten \pi_e zu jedem Ereignis e.
+
+-> PESP (Periodic Event Scheduling Problem): 
+	min_\pi \sum_{(i,j)\in A} w_ij [\pi_j - \pi_i -L_ij] 
+	s.t. L_ij <= \pi_j - \pi_i <= U_ij mod T
+	     \pi_i \in {0, 1, ..., T-1}
+	(NP-schwer! - enthält z.B. Hamiltonkreis-Problem)
