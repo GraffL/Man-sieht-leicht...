@@ -42,6 +42,8 @@ kommutiert.
 
 ** Optimierung **
 
+*** Fahrplanoptimierung ***
+
 _(Zug-)Fahrplanprobleme_ kann man als Ereignisnetzwerk (E,A) modellieren. Dabei ist E (Knoten) die Menge der Ereignisse "Zug A hält an Bahnhof B" und "Zug A fährt von Bahnhof B ab" und A (Kanten) die Menge der Aktivitäten "Zug fährt" (von Bahnhof zu Bahnhof), "Zug wartet" (von Ankunft zu Abfahrt), "Umsteigen" (von Ankunft zu Abfahrt (verschiedener Züge)); zusätzlich wird über Aktivitätskanten modelliert, welcher Zug zuerst fahren darf (damit Gleise nicht mehrfach belegt sind). Für periodische Fahrpläne wird zusätzlich eine Periode T vorgegeben und dann alle Zeiten mod T gerechnet.
 Aktivitätskanten erhalten zusätzlich untere und obere Zeitschranken [L_a, U_a]
 
@@ -52,3 +54,12 @@ Aktivitätskanten erhalten zusätzlich untere und obere Zeitschranken [L_a, U_a]
 	s.t. L_ij <= \pi_j - \pi_i <= U_ij mod T
 	     \pi_i \in {0, 1, ..., T-1}
 	(NP-schwer! - enthält z.B. Hamiltonkreis-Problem)
+	
+
+*** Chance Constrained Optimization ***	
+	
+_Chance Constrained Optimization_: Optimierungsprobleme bei denen Nebenbedingungen Zufallsvariablen sind.
+* Chance Constrained Linear Programming: min c^Tx s.t. P(Ax <= b) < \epsilon, x => 0, A,b Zufallsvariablen (Unsicherheit in c kann immerin Nebenbedingungen verschoben werden)
+	-> "stochastische Optimierung" (Lösung ist mit einer gewissen (kleinen) Wahrscheinlichkeit nicht zulässig)
+* Uncertain Linear Optimization: {min {c^T x: Ax <= b}}_{(a,A,b) \in U}, U "Unsicherheitsmenge"
+	-> robuste zulässige Lösung Ax <= b f.a. (c,A,b) \in U (selbst im "schlimmsten Fall noch zulässig" -> sehr konservativ, oft also verhältnismäßig teuer)
