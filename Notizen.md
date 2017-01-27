@@ -72,3 +72,5 @@ Ein elementarer Topos ist eine Kategorie, die folgendes besitzt:
 * Alle endlichen Limiten
 * innere Homobjekte
 * einen Unterobjektklassifizierer (Verallgemeinerung der 2-elementigen Menge, mit deren Hilfe man Teilmengen definieren kann (entsprechen Abbildungen in diese Menge hinein))
+
+Einführung: https://rawgit.com/iblech/mathezirkel-kurs/master/superturingmaschinen/was-sind-und-was-sollen-die-topoi.pdf
