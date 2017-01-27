@@ -63,3 +63,12 @@ _Chance Constrained Optimization_: Optimierungsprobleme bei denen Nebenbedingung
 	-> "stochastische Optimierung" (Lösung ist mit einer gewissen (kleinen) Wahrscheinlichkeit nicht zulässig)
 * Uncertain Linear Optimization: {min {c^T x: Ax <= b}}_{(a,A,b) \in U}, U "Unsicherheitsmenge"
 	-> robuste zulässige Lösung Ax <= b f.a. (c,A,b) \in U (selbst im "schlimmsten Fall noch zulässig" -> sehr konservativ, oft also verhältnismäßig teuer)
+	
+	
+	
+** Topostheorie ** 
+
+Ein elementarer Topos ist eine Kategorie, die folgendes besitzt:
+* Alle endlichen Limiten
+* innere Homobjekte
+* einen Unterobjektklassifizierer (Verallgemeinerung der 2-elementigen Menge, mit deren Hilfe man Teilmengen definieren kann (entsprechen Abbildungen in diese Menge hinein))

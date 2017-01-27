@@ -23,3 +23,9 @@ Gibt es eine konkret angebbare nicht-berechenbare Zahl?
 Beweise die Irrationaliät von k-te Wurzel aus 2 über Großen Satz von Fermat (nur für k>2 möglich - für k=2 ist der Satz "zu schwach")
   - Matt Parker: "Killing Maths Mosquitoes with Atomic Proofs: roots of two, Fermat and prime numbers " https://youtu.be/W1OkVkq2vFM
   - Zahlentheorie-ÜB (Ingo): Blatt 1/Aufgabe 4 http://zahlentheorie.speicherleck.de/uebung01.pdf
+  
+
+Gibt es zwei irrationale Zahlen x und y, sodass x^y eine rationale Zahl ist?
+	- 1. Antwort: Ja, entweder \sqrt(2) und \sqrt(2) _oder_ \sqrt(2)^\sqrt(2) und \sqrt(2). Denn wenn das erste kein Beispiel ist, dann das zweite: (\sqrt(2)^\sqrt(2))^\sqrt(2) = \sqrt(2)^(\sqrt(2)*\sqrt(2)) = \sqrt(2)^2 = 2
+		-> unklar bleibt: Welche von beiden Möglichkeiten ist nun tatsächlich das Beispiel? (die Antwort ist bekannt, aber anscheinend relativ komplex - nutzt Funktionentheorie)
+	- 2. Antowrt: \sqrt(2) und log_\sqrt(2) 17 (der Beweis für die Irrationaliät von log... geht ähnlich zu dem von \sqrt(2), aber ist sogar noch einfacher).
