@@ -74,3 +74,8 @@ Ein elementarer Topos ist eine Kategorie, die folgendes besitzt:
 * einen Unterobjektklassifizierer (Verallgemeinerung der 2-elementigen Menge, mit deren Hilfe man Teilmengen definieren kann (entsprechen Abbildungen in diese Menge hinein))
 
 Einführung: https://rawgit.com/iblech/mathezirkel-kurs/master/superturingmaschinen/was-sind-und-was-sollen-die-topoi.pdf
+
+
+* _geometric/first order_ theory: Alle Axiome lassen sich in der Form \forall x: (\phi => \psi) schreiben, wobei \phi und \psi geometrische Formeln sind, d.h. sie enthalten nur endliches und, unendliches oder und Existenzquantoren
+
+* Die Gelfand-Dualität ist ein Spezialfall von Morita-Äquivalenz (= Äquivalenz mathematischer Theorien)
