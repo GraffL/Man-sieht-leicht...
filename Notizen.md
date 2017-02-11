@@ -39,6 +39,11 @@ Ein Morphismus zwischen Spektra f: E -> F ist eine auf einem kofinalen Unterspek
 kommutiert.
 
 
+## Graphentheorie ##
+
+* Ein Graph ist bipartit <=> er enthält keine Kreise ungerader Länge (dieser und der folgende Fakt entstammen einem Vortrag zu degenerierten Hilbert-Schemata)
+* Man kann ein (symmetrisches) Produkt von (gerichteten?) Graphen definieren indem man sie als Delta-Komplexe ("Simplizialkomplexe mit Schleifen") auffasst. 
+
 
 ## Optimierung ##
 
