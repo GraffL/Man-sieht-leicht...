@@ -96,3 +96,8 @@ In der Newtonschen Physik wird das Gravitationspotential \Phi beschrieben durch 
 In der ART wird die Krümmung der Raumzeit G beschrieben durch
 	G = 8\pi T
 D.h. also "die Gravitation wird vom Energier-Impuls-Tensor erzeugt". Warum nicht von der Dichte? Die Dichte ist Koordinatensystemabhängig! (siehe: http://scienceblogs.de/hier-wohnen-drachen/2017/02/03/der-energie-impuls-tensor/?all=1 )
+
+
+## Elementares ##
+
+Den _euklidischen Algorithmus_ kann man wie folgt geometrisch realisieren: Um denn ggT(a,b) zu bestimmen zeichne ein Rechteck mit Seitenlängen a und b. Zeichne darin nebeneinander Quadrate maximaler Seitenlänge. Wird das Rechteck damit vollständig gefüllt, entspricht die Seitenlänge des Quadrates dem ggT. Andernfalls bleibt ein ungefülltes Rechteck übrig, mit dem der Prozess wiederholt wird.
