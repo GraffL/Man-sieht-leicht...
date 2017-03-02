@@ -70,6 +70,20 @@ _Chance Constrained Optimization_: Optimierungsprobleme bei denen Nebenbedingung
 	-> robuste zulässige Lösung Ax <= b f.a. (c,A,b) \in U (selbst im "schlimmsten Fall noch zulässig" -> sehr konservativ, oft also verhältnismäßig teuer)
 	
 	
+### Capacitated Network Design Games ###
+	(aus Vortrag von Thomas Erlebach)
+
+_Network Design Game_: Spiel läuft auf Graphen mit (festen) Kantengewichten, jeder Spieler hat einen Quell- und einen Zielknoten. Kosten von genutzten Kanten werden gleichmäßig an alle sie nutzende Spieler verteilt.
+
+_Capacitated Network Design Game_: Network Design Game, bei denen jede Kante zusätzlich eine Kapazität hat, welche die Zahl der Spieler beschränkt, die sie gleichzeitig nutzen können. Dies sind also i.A. keine nicht-kooperativen Spiele.
+	-> PoA ist unbeschränkt (Graph <|>, zwei Spieler von links nach rechts, alle Kanten Kapazität 1 und Kosten 0, außer senkrechte mit 2 und \infty.
+	-> Best-Responce-Dynamik kann 2^m Schritte benötigen (auf O(m) großem Netzwerk).
+	-> PoS mit max-cost als sozialen Kosten ist \theta(n log n) in asymmetrischen CND
+	-> PoS mit max-cost als sozialen Kosten ist O(n) in symmetrischen CND
+
+Ein exaktes Potential für diese Spiele ist \sum_{Kanten e}\sum_{i=1}^{last auf e} Kosten(e)/i
+	
+	
 	
 ## Topostheorie ## 
 
