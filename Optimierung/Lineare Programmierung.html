@@ -1,0 +1,68 @@
+﻿<!doctype html>
+
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <title>Lineare Programmierung</title>
+    
+    <meta name="author" content="Lukas Graf" />
+
+    <link href="css/impress-default.css" rel="stylesheet" />
+    <link href="css/impress-custom.css" rel="stylesheet" />
+	
+	<link rel="stylesheet" href="katex/katex.min.css">
+	<script src="katex/katex.min.js"></script>
+	<script src="katex/contrib/auto-render.min.js"></script>
+</head>
+
+<body> 
+<h1> Lineare Programmierung </h1>
+
+<h2> Dualität </h2>
+(Idee aus "The Design of Approximation Algorithms" von Williamson/Shmoys)
+
+<p>Sei $c \in \mathbb{Q}^n, b \in \mathbb{Q}^m, A \in \mathbb{Q}^{m \times n}$. Dann ist ein Lineares Programm (LP) gegeben durch:
+
+$$\begin{aligned}
+					&\min_{x \in \mathbb{Q}^m} c^T x \\
+	\text{u.d.N.}	& A x \leq b
+\end{aligned}$$</p>
+		
+<p>Das zugehörige Duale Programm (DP) ist gegeben durch:
+
+$$\begin{aligned}
+					&\max_{y \in \mathbb{Q}^n} b^T y \\
+	\text{u.d.N.}	& A^T y \geq c
+\end{aligned}$$</p>
+		
+Dann gilt:<br />
+<ul>
+<li><strong>Schwache Dualität:</strong> Jede zulässige Lösung $x$ von (LP) hat einen größeren Wert wie jede zulässige Lösung $y$ von (DP)</li>
+<li><strong>Starke Dualität:</strong> Sind (LP) und (DP) zulässig (besitzen eine zulässige Lösung), so haben die optimalen Lösungen der beiden Probleme den gleichen Wert.</li>
+</ul>
+
+<p>Intuition hierzu: Um den Wert einer Lösung von (LP) abzuschätzen, kann man eine Linearkombination der Zeilen von $A$ bilden, die in jedem Vektoreintrag kleiner gleich $c^T$ ist. Die entsprechende Kombination der $b_j$ ist dann eine untere Schranke für die Optimallösung (da die Belegungen der $x$ ja die zeilenweisen $b$-Schranken einhalten müssen). Das (DP) bestimmt gerade die größtmögliche solche Schranke (die $y_i$ sind die Koeffizienten der Linearkombination). -> Schwache Dualität</p>
+
+<p>Zwei zulässige Lösungen x und y erfüllen die <em>Komplementäre Schlupfbedingung</em>, wenn für jedes $j$ mit $x_j \gt 0$ die $j$-te Nebenbedingung von (DP) mit Gleichheit erfüllt ist (d.h. $\sum_i A_{ij} y_i = c_j$) und für jedes $i$ mit $y_i \gt 0$ die $i$ Nebenbedingung von (LP) mit Gleicheit erfüllt ist.</p>
+
+Damit erhält man das folgende Korollar aus der starken Dualität:
+<ul>
+<li><strong>Komplementärer Schlupf:</strong> Zwei zulässige Lösungen $x$ und $y$ von (LP) bzw. (DP) sind genau dann optimal, wenn sie die komplementäre Schlupfbedingung erfüllen.</li>
+</ul>
+
+<script>
+  renderMathInElement(
+	document.body,
+	  {
+		  delimiters: [
+			  {left: "$$", right: "$$", display: true},
+			  {left: "\\[", right: "\\]", display: true},
+			  {left: "$", right: "$", display: false},
+			  {left: "\\(", right: "\\)", display: false}
+		  ]
+	  }
+  );
+</script>
+
+</body>
+</html>

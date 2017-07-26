@@ -115,3 +115,7 @@ D.h. also "die Gravitation wird vom Energier-Impuls-Tensor erzeugt". Warum nicht
 ## Elementares ##
 
 Den _euklidischen Algorithmus_ kann man wie folgt geometrisch realisieren: Um denn ggT(a,b) zu bestimmen zeichne ein Rechteck mit Seitenlängen a und b. Zeichne darin nebeneinander Quadrate maximaler Seitenlänge. Wird das Rechteck damit vollständig gefüllt, entspricht die Seitenlänge des Quadrates dem ggT. Andernfalls bleibt ein ungefülltes Rechteck übrig, mit dem der Prozess wiederholt wird.
+
+
+## Geometrie ##
+

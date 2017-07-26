@@ -17,3 +17,5 @@
 * Einige Aussagen über die Geometrie von bestimmten Teilmengen des Strategieprofilraums (vgl. Menge der symmetrischen Profile in Th 2).
 
 * Einbettung von kooperativen Spielen in nicht-kooperative: Mache Verhandlungen zu Beginn des Spiels zum Teil des Spiels (zusätzliche Strategien) und mache Auszahlungsfunktion davon abhängig (entspricht Transfer von Auszahlungen). Dadurch erhält man ein (unendliches) kooperatives Spiel.
+
+* Beschreibt vereinfachtes 3-Personen Poker als nicht-kooperatives Spiel
