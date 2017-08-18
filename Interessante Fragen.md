@@ -14,3 +14,7 @@ Denn \integral_{2^k a}^{2^(k+1) a} x^n dx ={Substitution x = 2^k y}= \integral_{
 Frage: Kann man jetzt auch irgendwas für die Fälle n != -1 sagen?
 
 Ein ähnliches (gleiches?) Phänomen tritt beim Mastertheorem auf: Es gibt drei Fälle: Der erste Rekursionsschritt dominiert, der letzte Rekursionsschritt dominiert (und damit die Anzahl dieser) oder beide haben gleiches "Gewicht" - und man erhält einen logarithmischen Faktor in der Laufzeit (vgl. Anschauung im Informatik III-Skript von Professor Hagerup)
+
+--------------------
+
+Es gibt anscheinend ein Theorem, welches besagt, dass "natürliche Beweise" für P != NP nicht funktionieren können. Was genau bedeutet das?

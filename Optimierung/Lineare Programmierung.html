@@ -25,14 +25,14 @@
 
 $$\begin{aligned}
 					&\min_{x \in \mathbb{Q}^m} c^T x \\
-	\text{u.d.N.}	& A x \leq b
+	\text{u.d.N.}	& A x \geq b
 \end{aligned}$$</p>
 		
 <p>Das zugehörige Duale Programm (DP) ist gegeben durch:
 
 $$\begin{aligned}
 					&\max_{y \in \mathbb{Q}^n} b^T y \\
-	\text{u.d.N.}	& A^T y \geq c
+	\text{u.d.N.}	& A^T y \leq c
 \end{aligned}$$</p>
 		
 Dann gilt:<br />
@@ -49,6 +49,31 @@ Damit erhält man das folgende Korollar aus der starken Dualität:
 <ul>
 <li><strong>Komplementärer Schlupf:</strong> Zwei zulässige Lösungen $x$ und $y$ von (LP) bzw. (DP) sind genau dann optimal, wenn sie die komplementäre Schlupfbedingung erfüllen.</li>
 </ul>
+
+
+<h2> Relaxierung </h2>
+
+<p>Gegeben ein Optimierungsproblem $\min\{z(x) | x \in S \}$. Dann ist das Optimierungsproblem $\min\{z'(x) | x \in S' \}$ eine <em>Relaxierung</em> des ersten Problems, wenn gilt:</p>
+
+\[S \subseteq S' \quad\text{und}\quad z'(x) \leq z(x) \text{ f.a. } x \in S\]
+
+<p>In diesem Fall ist der Wert einer optimalen Lösung der Relaxierung eine untere Schranke für den optimalen Wert des ursprünglichen Problems.</p>
+
+<h3> Lagrange-Relaxation </h3>
+
+<p>Gegeben ein Optimierungsproblem $\min\{z(x) | x \in S, A^1 x \geq b^1 \}$. Dann ist dessen <strong>Lagrange-Relaxierung</strong> bezüglich $A^1 x \geq b^1$ mit $\lambda \geq 0$ gegeben durch $\min\{z'(x) := z(x) + \lambda(b^1 - A^1 x) | x \in S \}$. Dies ist eine Relaxierung.</p>
+
+<p>Intuition dazu: Wir lassen bei der Relaxierung &bdquo;schwierige Nebenbedingungen&ldquo; weg und führen dafür &bdquo;Strafen&ldquo; für das Verletzen dieser Bedingungen in die Zielfunktion ein. Für $\lambda \gg 0$ ist diese Strafe so groß, dass in der Optimallösung alle Nebenbedingungen eingehalten werden.</p>
+
+<p>Gegeben ein Optimierungsproblem $\min\{z(x) | x \in S, A^1 x = b^1 \}$. Dann ist dessen <strong>Lagrange-Relaxierung</strong> bezüglich $A^1 x = b^1$ mit $\lambda \in \mathbb{R}$ gegeben durch $\min\{z'(x) := z(x) + \lambda(b^1 - A^1 x) | x \in S \}$. Dies ist eine Relaxierung.</p>
+
+<p>Das <strong>Lagrange-duale Programm</strong> dazu ist gegeben durch:
+$$\begin{aligned}
+					&\min_{\lambda\geq 0}\max_{x \in \mathbb{Q}^n} z(x) + \lambda(b^1 -A^1 x) \\
+	\text{u.d.N.}	& x \in S
+\end{aligned}$$
+</p>
+
 
 <script>
   renderMathInElement(
