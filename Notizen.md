@@ -1,4 +1,15 @@
-﻿## Dynamische Systeme ## 
+﻿## Allgemeines ##
+
+### Ungleichungen/Abschätzungen ###
+
+* (aus Bachelorarbeitsvortrag von Lukas Hofelich):
+	-- Verwende bekannte Ungleichungen um zu zeigende Ungleichung als Linearkombination davon (mit noch zu wählenden Koeffizienten) zu formulieren
+	-- erhalte Restriktionen an die Koeffizienten daraus, dass die zu zeigende(n) Ungleichung(en) gelten müssen.
+	-- erhalte eine Variable, die die Stärke der Gesamtabschätzung beschreibt (etwa m in: x <= ... <(aus Lin.komb.)= ... <= m y)
+	Löse LP: "min m udN Restriktionen an Koeffizienten + Zusammensetzung von m aus Koeffizienten" um bestmögliche Abschätzung zu erhalten
+
+
+## Dynamische Systeme ## 
 
 Ein _dynamisches System_ (auf einem Raum X) ist gegeben durch eine Funktion F: X x T -> X. Diese gibt an, wie sich Elemente des Zustandsraumes X im Laufe der Zeit T ändern. Für T = IN ist F oft gegeben durch eine Funktion f: X -> X und F(x,n) := f^n(x), d.h. für jeden Zeitschritt wird einmal f angewandt.
 
