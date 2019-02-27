@@ -37,6 +37,16 @@ Warum können die Quarternionen kein Körper sein? Dann wären sie eine endliche
 Motto: Für ausreichend gute Raumpaare gilt: Homologie von Raumpaar = Homologie von Quotient der beiden Räume
 	-> gilt bspw. NICHT für RP^n, RP^{n-1} (siehe AlgTopo B11/A3)
 	
+	
+Motto: Homotopietheorie untersucht Wegzusammenhang, Homologietheorie untersucht Zusammenhang (von Eschenburg, via Stefan A.)
+	-> Frage: Was bedeutet das konkreter?
+	-> Frage: Aus Wegzusammenhang folgt Zusammenhang. Zeigt das einen Zusammenhang zwischen Homotopie- und Homologietheorie?
+	
+	
+Motto: Kohomologie ist besser/einfacher/...(?) als Homologie (zumindest scheint man öfter ersteres anzuwenden)
+	-> Frage: Stimmt das überhaupt? Falls ja, warum bzw. in welchem Sinne?
+	
+	
 ### Spektra ###
 
 Ein Spektrum E ist eine Folge punktierter CW-Komplexe (E_n, *)_{n\in IZ}, sodass \Sigma E_n \subseteq E_{n+1} (die Einhängung von E_n hat (zelluläre) Inklusion in E_{n+1})
@@ -93,6 +103,37 @@ _Capacitated Network Design Game_: Network Design Game, bei denen jede Kante zus
 	-> PoS mit max-cost als sozialen Kosten ist O(n) in symmetrischen CND
 
 Ein exaktes Potential für diese Spiele ist \sum_{Kanten e}\sum_{i=1}^{last auf e} Kosten(e)/i
+
+
+### Vermischtes ###
+
+* Möchte man in einem Optimierungsproblem "dünne" Vektoren (mit vielen Nulleinträgen) bevorzugen, kann man einen Term \tau ||x||_1 zur Zielfunktion addieren. Soll die Zielfunktion differenzierbar sein, kann man den Betrag durch Pseudo-Huber-Approximation ersetzen: |x| -> \sqrt(\mu^2 + x_1^2) - \mu
+
+* _P-Repräsentation_ eines Polyeders: P = {Mx | a <= Bx <= b, l <= x <= u} -> Ziel: Bestimme _V-Repräsentation_ P = {x | ... }
+	zugehöriges Problem: (MOLP) min (Mx, -e^TMx) udN a <= Bx <= b l <= x <= u
+	
+* _Stackelberg-Game_: 2 Spieler: "Leader" entscheidet zuerst, dann entscheidet "Follower" (wobei er die Entscheidung des Leaders kennt)
+
+* _Generalized Nash Games_: Strategieraum von Spieler i hängt von den gewählten Strategien der anderen Spieler ab, ist also von der Form X_i(x^{-i}). Verallgemeinertes Nash-Gleichgewicht ist NG in diesem Spiel (Abweichung im jeweils durch die momentane Strategie bestimmten Strategieraum des jeweiligen Spielers). Bspw. kann der Strategieraum jetzt ein Polyeder sein. Andere Sichtweise: Jeder Spieler hat ein spielerspezifisches Optimierungsproblem mit von den Strategien der anderen Spieler abhängigen Restriktionen.
+
+* _Standard Quadratic Problem_: max {x^TAx | x \in D} mit D := {x >= 0 | e^T x = 1}. Beobachtung: Ist A eine Adjazenzmatrix, so entspricht das Problem der Suche nach einer maximalen Clique. (warum?)
+
+* _(enlarged) inner parallel set_: Eine aus dem gegebenen Zulässigkeitsbereich eines MILP erhaltener Bereich (spezieller Bauart), sodass jede darauf gefundene Lösung auch nach Runden noch zulässig ist. "Inner parallel set" ist also einfach die entsprechende Verkleinerung der relaxierten Zulässigkeitsmenge. 
+
+* Umwandeln eines Biobjective Minimization Problems (min f_1(x) und min f_2(x) udN x \in X) in eine Single Objective Problem:
+	** _Weighted Sum_: min (f_1(x) + \gamma f_2(x)) udN x \in X (für ein fest gewähltes \gamma > 0)
+	** Budget constraint_: min f_2(x) udN f_1(x) <= B, x \in X (für ein fest gewähltes B > 0)
+	Aus \alpha-Approximationsagorithmus für Weighted Sum erhält man (\alpha(1+2\epsilon), \alpha(1+1/\epsilon))-Approximations Algorithmus für Budget (d.h. Budget wird nur bis auf zweite Konstante eingehalten)
+	
+* Ein Mengensystem ist genau dann ein Matroid, wenn für jede denkbare Kostenfunktion auf den Mengen der Greedy-Ansatz eine optimale Lösung findet. Ein Beispiel dafür, dass es nicht genügt, wenn Greedy für eine bestimmte Kostenfunktion optimal ist, ist das "Cabin Manager"-Problem (entspricht Maximum Independent Set für Intervallgraphen)
+
+* Vereinigung (mit nicht notwendigerweise identischen Grundmengen) und direkte Summe (entspricht Vereinigung von disjunkten Grundmengen) von Matroiden sind Matroide.
+	-> Daher kann man Greedy bspw. auch nutzen, um minimale disjunkte Spannbäue zu finden
+	Hat man für die vereinigten Matroide "Unabhängigkeitsorakel" (welche besagen, ob eine Menge unabhängig ist oder nicht), so erhält man auch ein Orakel für den Vereinigungsmatroid (zumindest im Falle identischer Grundmengen).
+	
+* _Generic Covering/Packing Problem_: E endliche Menge, F Familie von Teilmengen von E, c Kapazitätsvektor, r Rewardvektor(beide ganzzahlig), A ganzzahlige positive Matrix. 
+		** Dann min{c^T x | Ax >= r, x >= 0} Covering Problem
+		** Dann max{r^T y | A^T y <= c, y >= 0} Packing Problem (dual)
 	
 	
 	
